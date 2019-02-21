@@ -9,7 +9,7 @@ RUN touch /etc/init.d/functions.sh \
  && echo "ACCEPT_KEYWORDS=\"~amd64\"" >> /etc/portage/make.conf \
  && echo "MAKEOPTS=\"-j${JOBS}\"" >> /etc/portage/make.conf
 
-RUN emerge --sync
+RUN emerge --sync --quiet
 
 WORKDIR /usr/portage/packages/sys-devel
 RUN wget "http://packages.gentooexperimental.org/packages/amd64-stable/sys-devel/gcc-${GCC_VERSION}.tbz2" \
