@@ -1,0 +1,2 @@
+#!/bin/sh
+docker build --build-arg GCC_VERSION=$GCC_VERSION --build-arg JOBS=$JOBS .
